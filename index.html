@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram Acel Official</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #000000, #330000, #660000);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Teks berjalan */
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      font-weight: 900; /* super tebal */
+      font-size: 36px; /* besar biar jelas */
+      padding: 25px 0;
+      background: linear-gradient(90deg, gold, #b8860b, black);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: marquee 15s linear infinite;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 25px rgba(0,0,0,0.9);
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      margin-top: 60px;
+      width: 100%;
+    }
+
+    .card {
+      width: 400px; /* default untuk PC */
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.9);
+      color: white;
+      transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: perspective(1000px) rotateX(0) rotateY(0) scale(1.05);
+      box-shadow: 0 0 40px rgba(255,255,255,0.3);
+    }
+
+    .card h2 {
+      margin-bottom: 25px;
+      font-size: 26px;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 18px;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, gold, #d4af37);
+      color: black;
+      box-shadow: 0 0 15px rgba(255,215,0,0.6);
+    }
+
+    .btn-blue {
+      background: linear-gradient(135deg, #0080ff, #0040ff);
+      color: white;
+      box-shadow: 0 0 15px rgba(0,128,255,0.6);
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: scale(1.1);
+    }
+
+    /* Card khusus */
+    .blue-card {
+      background: linear-gradient(135deg, #00264d, #004080, #0073e6);
+    }
+
+    .purple-card {
+      background: linear-gradient(135deg, #3a0066, #660099, #9900cc);
+    }
+
+    /* Responsive untuk HP */
+    @media (max-width: 500px) {
+      .card {
+        width: 90%; /* full lebar HP */
+        padding: 25px 20px;
+      }
+      .marquee {
+        font-size: 28px; /* biar pas di layar kecil */
+        padding: 15px 0;
+      }
+      .card h2 {
+        font-size: 22px;
+      }
+      .btn {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Teks berjalan -->
+  <div class="marquee">TELEGRAM ACEL OFFICIAL</div>
+
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card blue-card">
+      <h2>TELEGRAM UTAMA ACEL</h2>
+      <a class="btn btn-gold" href="https://t.me/acelXmodz" target="_blank">TELEGRAM UTAMA 🐿</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card purple-card">
+      <h2 style="color: gold;">TELEGRAM ACEL KE 2</h2>
+      <a class="btn btn-blue" href="https://t.me/acelofficialku2" target="_blank">TELEGRAM ACEL KE 2 🐿</a>
+    </div>
+  </div>
+</body>
+</html>
